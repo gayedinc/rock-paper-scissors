@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taş Kağıt Makas Oyunu</title>
+  <link rel="stylesheet" href="assets/css/tas-kagit-makas.css">
+  <script src="assets/js/tas-kagit-makas.js" defer></script>
 </head>
 <body>
-  <h1>Taş Kağıt Makas Oyunu</h1>
-
-  <script src="assets/js/tas-kagit-makas.js"></script>
+  <!-- Game Content Start -->
+  <div class="game-content">
+    <!-- Game Content Inner Start -->
+    <div class="game-content-inner">
+      <h1>Taş Kağıt Makas Oyunu</h1>
+      <!-- Game Start -->
+      <div class="game">
+        <div class="user" id="userChoice">
+          <h2>Oyuncu</h2>
+          <div class="user-choice">
+            <button id="rock">Taş</button>
+            <button id="paper">Kağıt</button>
+            <button id="scissors">Makas</button>
+          </div>
+        </div>
+        <div class="computer">
+          <h2>Bilgisayar</h2>
+          <div id="computerChoice" class="computer-choice"></div>
+        </div>
+      </div>
+      <!-- Game End -->
+      <!-- Score Content Start -->
+      <div class="score-content">
+        <p>Oyuncu: <span id="userScoreTxt">0</span></p>
+        <p>Bilgisayar: <span id="computerScoreTxt">0</span></p>
+      </div>
+      <!-- Score Content End -->
+      <!-- Button Area Start -->
+      <div class="button-area">
+        <button id="winnerBtn" class="winner-button">Kazanan <span id="winnerBtnTxt"></span></button>
+        <button id="clearBtn" class="clear-button">Skorları Temizle</button>
+      </div>
+      <!-- Button Area End -->
+    </div>
+    <!-- Game Content Inner End -->
+  </div>
+  <!-- Game Content End -->
 </body>
 </html>
