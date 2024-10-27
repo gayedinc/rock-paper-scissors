@@ -1,14 +1,41 @@
 const choiceList = ["Taş", "Kağıt", "Makas"];
-let randomNumber = 0;
 
-const getComputerChoice = () => {
-  randomNumber = Math.floor(Math.random() * 3);
-  return (choiceList[randomNumber]);
+function getComputerChoice() {
+  return choiceList.at(Math.floor(Math.random() * 3));
 };
 
 rock.addEventListener('click', handleRockBtn);
 paper.addEventListener('click', handlePaperBtn);
 scissors.addEventListener('click', handleScissorsBtn);
+
+// function play() {
+//   const hamle = this.innerText.toLocaleLowerCase('tr');
+//   userChoice.innerText = hamle;
+//   const computerChoiceValue = getComputerChoice();
+//   computerChoice.innerText = computerChoiceValue;
+//   computerChoice.innerHTML = `<button>${computerChoiceValue}</button>`;
+//   winnerBtnTxt.innerHTML = "";
+
+//   if (hamle === computerChoiceValue) {
+//     winnerBtn.innerText = 'Berabere';
+//   } else if (hamle === 'taş' && computerChoiceValue === 'makas') {
+//     winnerBtn.innerText = ' Oyuncu';
+//     userScore++;
+//     userScoreTxt.innerText = userScore;
+//   } else if (hamle === 'makas' && computerChoiceValue === 'kağıt') {
+//     winnerBtn.innerText = ' Oyuncu';
+//     userScore++;
+//     userScoreTxt.innerText = userScore;
+//   } else if (hamle === 'kağıt' && computerChoiceValue === 'taş') {
+//     winnerBtn.innerText = ' Oyuncu';
+//     userScore++;
+//     userScoreTxt.innerText = userScore;
+//   } else {
+//     winnerBtn.innerText = ' Bilgisayar';
+//     computerScore++;
+//     computerScoreTxt.innerText = computerScore;
+//   }
+// }
 
 function handleRockBtn() {
   const computerChoiceValue = getComputerChoice();
